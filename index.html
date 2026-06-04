@@ -15,7 +15,9 @@
   <header id="header">
     <nav class="nav">
       <div class="nav-logo">
-        <a href="#home">FRANKIE POOH</a>
+        <a href="#home">
+          <img src="images/signature.png" alt="Frankie Pooh" class="nav-signature">
+        </a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -30,26 +32,27 @@
     </nav>
   </header>
 
-  <!-- HERO SLIDER -->
+  <!-- HERO PANELS -->
   <section id="home" class="hero">
-    <div class="hero-slider" id="heroSlider">
-      <div class="slide active">
-        <img src="https://picsum.photos/1600/900?random=1" alt="Featured artwork">
-        <div class="slide-caption">
-          <h1>Frankie Pooh</h1>
-          <p>Paintings &middot; Prints &middot; Digital Art</p>
-        </div>
+    <div class="hero-panels">
+      <div class="hero-panel panel-1">
+        <img src="images/artwork-1.jpg" alt="Artwork by Frankie Pooh">
       </div>
-      <div class="slide">
-        <img src="https://picsum.photos/1600/900?random=2" alt="Featured artwork">
+      <div class="hero-panel panel-2">
+        <img src="images/artwork-2.jpg" alt="Artwork by Frankie Pooh">
       </div>
-      <div class="slide">
-        <img src="https://picsum.photos/1600/900?random=3" alt="Featured artwork">
+      <div class="hero-panel panel-3">
+        <img src="images/artwork-3.jpg" alt="Artwork by Frankie Pooh">
+      </div>
+      <div class="hero-panel panel-4">
+        <img src="images/artwork-4.jpg" alt="Artwork by Frankie Pooh">
       </div>
     </div>
-    <button class="slider-btn slider-prev" id="sliderPrev">&#8592;</button>
-    <button class="slider-btn slider-next" id="sliderNext">&#8594;</button>
-    <div class="slider-dots" id="sliderDots"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-signature">
+      <img src="images/signature.png" alt="Frankie Pooh">
+      <p class="hero-tagline">Paintings &middot; Prints &middot; Digital Art</p>
+    </div>
   </section>
 
   <!-- NEW ARRIVALS -->
@@ -60,21 +63,10 @@
         <div class="featured-card">
           <a href="#shop">
             <div class="card-img-wrap">
-              <img src="https://picsum.photos/600/750?random=4" alt="Untitled No. 1">
+              <img src="images/artwork-2.jpg" alt="Vintage Bear">
             </div>
             <div class="card-info">
-              <h3>Untitled No. 1</h3>
-              <p>Mixed Media &middot; $450</p>
-            </div>
-          </a>
-        </div>
-        <div class="featured-card">
-          <a href="#shop">
-            <div class="card-img-wrap">
-              <img src="https://picsum.photos/600/750?random=5" alt="Abstract Study">
-            </div>
-            <div class="card-info">
-              <h3>Abstract Study</h3>
+              <h3>Vintage Bear</h3>
               <p>Digital Print &middot; $120</p>
             </div>
           </a>
@@ -82,10 +74,21 @@
         <div class="featured-card">
           <a href="#shop">
             <div class="card-img-wrap">
-              <img src="https://picsum.photos/600/750?random=6" alt="Series III">
+              <img src="images/artwork-3.jpg" alt="FrankenFlash">
             </div>
             <div class="card-info">
-              <h3>Series III</h3>
+              <h3>FrankenFlash</h3>
+              <p>Mixed Media &middot; $450</p>
+            </div>
+          </a>
+        </div>
+        <div class="featured-card">
+          <a href="#shop">
+            <div class="card-img-wrap">
+              <img src="images/artwork-4.jpg" alt="Incognito">
+            </div>
+            <div class="card-info">
+              <h3>Incognito</h3>
               <p>Painting &middot; $800</p>
             </div>
           </a>
@@ -213,7 +216,7 @@
   <section id="about" class="section-about">
     <div class="container about-container">
       <div class="about-image">
-        <img src="https://picsum.photos/600/750?random=30" alt="Frankie Pooh">
+        <img src="images/FrankBio.jpg" alt="Frankie Pooh">
       </div>
       <div class="about-text">
         <h2>About</h2>
@@ -248,8 +251,8 @@
     <div class="container footer-inner">
       <div class="footer-logo">FRANKIE POOH</div>
       <div class="footer-social">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="https://www.instagram.com/frankiepooh/" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@thefrankiepooh?_r=1&amp;_t=ZT-96uxaDhttgj" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a>
       </div>
       <p class="footer-copy">&copy; 2026 Frankie Pooh. All rights reserved.</p>
     </div>

@@ -2,47 +2,19 @@
    FRANKIE POOH — Art Portfolio Scripts
    ============================================= */
 
-// ── Hero Slider ──────────────────────────────
-const slides = document.querySelectorAll('.slide');
-const dotsContainer = document.getElementById('sliderDots');
-let currentSlide = 0;
-let sliderInterval;
+// ── Featured Cards Scroll Reveal ─────────────
+document.querySelectorAll('.featured-card').forEach(card => card.classList.add('reveal'));
 
-slides.forEach((_, i) => {
-  const dot = document.createElement('button');
-  dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
-  dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-  dot.addEventListener('click', () => {
-    goToSlide(i);
-    resetSliderInterval();
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
   });
-  dotsContainer.appendChild(dot);
-});
+}, { threshold: 0.12 });
 
-function goToSlide(index) {
-  slides[currentSlide].classList.remove('active');
-  dotsContainer.children[currentSlide].classList.remove('active');
-  currentSlide = (index + slides.length) % slides.length;
-  slides[currentSlide].classList.add('active');
-  dotsContainer.children[currentSlide].classList.add('active');
-}
-
-function resetSliderInterval() {
-  clearInterval(sliderInterval);
-  sliderInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
-}
-
-document.getElementById('sliderNext').addEventListener('click', () => {
-  goToSlide(currentSlide + 1);
-  resetSliderInterval();
-});
-
-document.getElementById('sliderPrev').addEventListener('click', () => {
-  goToSlide(currentSlide - 1);
-  resetSliderInterval();
-});
-
-sliderInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
+document.querySelectorAll('.featured-card.reveal').forEach(card => revealObserver.observe(card));
 
 // ── Mobile Nav ───────────────────────────────
 const navToggle = document.getElementById('navToggle');
