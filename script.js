@@ -123,6 +123,10 @@ document.addEventListener('keydown', e => {
 // ── Contact Form ─────────────────────────────
 document.getElementById('contactForm').addEventListener('submit', e => {
   e.preventDefault();
+  const name = e.target.name.value.trim();
+  const email = e.target.email.value.trim();
+  const message = e.target.message.value.trim();
+  if (!name || !email || !message) return;
   const success = document.getElementById('contactSuccess');
   success.classList.add('visible');
   e.target.reset();
