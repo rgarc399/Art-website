@@ -104,45 +104,46 @@
       <div class="gallery-filters">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="paintings">Paintings</button>
-        <button class="filter-btn" data-filter="prints">Prints</button>
-        <button class="filter-btn" data-filter="digital">Digital</button>
+        <button class="filter-btn" data-filter="video">Video</button>
       </div>
       <div class="gallery-grid" id="galleryGrid">
         <div class="gallery-item" data-category="paintings">
-          <img src="https://picsum.photos/600/700?random=10" alt="Painting 01">
+          <img src="images/Artwork-5.JPG" alt="Painting 01">
           <div class="gallery-overlay"><span>Painting 01</span></div>
         </div>
-        <div class="gallery-item" data-category="prints">
-          <img src="https://picsum.photos/600/600?random=11" alt="Print 01">
-          <div class="gallery-overlay"><span>Print 01</span></div>
-        </div>
-        <div class="gallery-item" data-category="digital">
-          <img src="https://picsum.photos/600/800?random=12" alt="Digital 01">
-          <div class="gallery-overlay"><span>Digital 01</span></div>
-        </div>
         <div class="gallery-item" data-category="paintings">
-          <img src="https://picsum.photos/600/650?random=13" alt="Painting 02">
+          <img src="images/Artwork-6.JPG" alt="Painting 02">
           <div class="gallery-overlay"><span>Painting 02</span></div>
         </div>
-        <div class="gallery-item" data-category="digital">
-          <img src="https://picsum.photos/600/720?random=14" alt="Digital 02">
-          <div class="gallery-overlay"><span>Digital 02</span></div>
-        </div>
-        <div class="gallery-item" data-category="prints">
-          <img src="https://picsum.photos/600/680?random=15" alt="Print 02">
-          <div class="gallery-overlay"><span>Print 02</span></div>
-        </div>
         <div class="gallery-item" data-category="paintings">
-          <img src="https://picsum.photos/600/760?random=16" alt="Painting 03">
+          <img src="images/Artwork-7.JPEG" alt="Painting 03">
           <div class="gallery-overlay"><span>Painting 03</span></div>
         </div>
-        <div class="gallery-item" data-category="digital">
-          <img src="https://picsum.photos/600/640?random=17" alt="Digital 03">
-          <div class="gallery-overlay"><span>Digital 03</span></div>
+        <div class="gallery-item" data-category="paintings">
+          <img src="images/Artwork-8.JPG" alt="Painting 04">
+          <div class="gallery-overlay"><span>Painting 04</span></div>
         </div>
-        <div class="gallery-item" data-category="prints">
-          <img src="https://picsum.photos/600/710?random=18" alt="Print 03">
-          <div class="gallery-overlay"><span>Print 03</span></div>
+        <div class="gallery-item" data-category="paintings">
+          <img src="images/Artwork-9.jpeg" alt="Painting 05">
+          <div class="gallery-overlay"><span>Painting 05</span></div>
+        </div>
+        <div class="gallery-item gallery-item--video" data-category="video">
+          <video autoplay muted loop playsinline>
+            <source src="images/Video-1.MOV" type="video/mp4">
+          </video>
+          <div class="gallery-overlay"><span>Video 01</span></div>
+        </div>
+        <div class="gallery-item gallery-item--video" data-category="video">
+          <video autoplay muted loop playsinline>
+            <source src="images/Video-2.MOV" type="video/mp4">
+          </video>
+          <div class="gallery-overlay"><span>Video 02</span></div>
+        </div>
+        <div class="gallery-item gallery-item--video" data-category="video">
+          <video autoplay muted loop playsinline>
+            <source src="images/Video-3.MOV" type="video/mp4">
+          </video>
+          <div class="gallery-overlay"><span>Video 03</span></div>
         </div>
       </div>
     </div>
@@ -155,6 +156,7 @@
     <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
     <div class="lightbox-content">
       <img src="" alt="" id="lightboxImg">
+      <video id="lightboxVideo" controls></video>
       <p class="lightbox-caption" id="lightboxCaption"></p>
     </div>
   </div>
@@ -166,45 +168,56 @@
       <div class="shop-grid">
         <div class="shop-item">
           <div class="shop-img-wrap">
-            <img src="https://picsum.photos/500/600?random=20" alt="Untitled No. 1">
+            <img src="images/Artwork-5.JPG" alt="Original No. 5">
           </div>
           <div class="shop-info">
-            <h3>Untitled No. 1</h3>
-            <p class="medium">Mixed Media on Canvas &middot; 24&Prime;&times;30&Prime;</p>
-            <p class="price">$450</p>
+            <h3>Original No. 5</h3>
+            <p class="medium">Original Painting</p>
+            <p class="price">Inquire for Price</p>
             <a href="#contact" class="btn-buy">Inquire to Buy</a>
           </div>
         </div>
         <div class="shop-item">
           <div class="shop-img-wrap">
-            <img src="https://picsum.photos/500/600?random=21" alt="Abstract Study">
+            <img src="images/Artwork-6.JPG" alt="Original No. 6">
           </div>
           <div class="shop-info">
-            <h3>Abstract Study</h3>
-            <p class="medium">Digital Print &middot; Limited Edition 1/50</p>
-            <p class="price">$120</p>
+            <h3>Original No. 6</h3>
+            <p class="medium">Original Painting</p>
+            <p class="price">Inquire for Price</p>
             <a href="#contact" class="btn-buy">Inquire to Buy</a>
           </div>
         </div>
         <div class="shop-item">
           <div class="shop-img-wrap">
-            <img src="https://picsum.photos/500/600?random=22" alt="Series III">
+            <img src="images/Artwork-7.JPEG" alt="Original No. 7">
           </div>
           <div class="shop-info">
-            <h3>Series III</h3>
-            <p class="medium">Oil on Canvas &middot; 36&Prime;&times;48&Prime;</p>
-            <p class="price">$800</p>
+            <h3>Original No. 7</h3>
+            <p class="medium">Original Painting</p>
+            <p class="price">Inquire for Price</p>
             <a href="#contact" class="btn-buy">Inquire to Buy</a>
           </div>
         </div>
         <div class="shop-item">
           <div class="shop-img-wrap">
-            <img src="https://picsum.photos/500/600?random=23" alt="Dreamscape">
+            <img src="images/Artwork-8.JPG" alt="Original No. 8">
           </div>
           <div class="shop-info">
-            <h3>Dreamscape</h3>
-            <p class="medium">Works on Paper &middot; Signed Print</p>
-            <p class="price">$200</p>
+            <h3>Original No. 8</h3>
+            <p class="medium">Original Painting</p>
+            <p class="price">Inquire for Price</p>
+            <a href="#contact" class="btn-buy">Inquire to Buy</a>
+          </div>
+        </div>
+        <div class="shop-item">
+          <div class="shop-img-wrap">
+            <img src="images/Artwork-9.jpeg" alt="Original No. 9">
+          </div>
+          <div class="shop-info">
+            <h3>Original No. 9</h3>
+            <p class="medium">Original Painting</p>
+            <p class="price">Inquire for Price</p>
             <a href="#contact" class="btn-buy">Inquire to Buy</a>
           </div>
         </div>

@@ -381,7 +381,8 @@ img {
   cursor: pointer;
 }
 
-.gallery-item img {
+.gallery-item img,
+.gallery-item--video video {
   width: 100%;
   height: auto;
   display: block;
@@ -410,7 +411,8 @@ img {
   opacity: 1;
 }
 
-.gallery-item:hover img {
+.gallery-item:hover img,
+.gallery-item--video:hover video {
   transform: scale(1.04);
 }
 
@@ -448,6 +450,15 @@ img {
   width: auto;
   height: auto;
   object-fit: contain;
+}
+
+#lightboxVideo {
+  display: none;
+  max-height: 85vh;
+  max-width: 88vw;
+  width: auto;
+  height: auto;
+  outline: none;
 }
 
 .lightbox-caption {
@@ -506,7 +517,7 @@ img {
 
 .shop-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
@@ -770,6 +781,7 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 
 @media (max-width: 768px) {
   .nav-toggle {

@@ -54,21 +54,39 @@ filterBtns.forEach(btn => {
 // ── Lightbox ─────────────────────────────────
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
+const lightboxVideo = document.getElementById('lightboxVideo');
 const lightboxCaption = document.getElementById('lightboxCaption');
 const visibleItems = () => [...galleryItems].filter(item => !item.classList.contains('hidden'));
 let lightboxIndex = 0;
 
+function setLightboxContent(item) {
+  const isVideo = item.classList.contains('gallery-item--video');
+  if (isVideo) {
+    lightboxImg.style.display = 'none';
+    lightboxVideo.style.display = 'block';
+    lightboxVideo.src = item.querySelector('source').getAttribute('src');
+    lightboxVideo.load();
+  } else {
+    lightboxVideo.style.display = 'none';
+    lightboxVideo.pause();
+    lightboxVideo.src = '';
+    lightboxImg.style.display = '';
+    lightboxImg.src = item.querySelector('img').src;
+    lightboxImg.alt = item.querySelector('img').alt;
+  }
+  lightboxCaption.textContent = item.querySelector('span').textContent;
+}
+
 function openLightbox(index) {
-  const items = visibleItems();
   lightboxIndex = index;
-  lightboxImg.src = items[index].querySelector('img').src;
-  lightboxImg.alt = items[index].querySelector('img').alt;
-  lightboxCaption.textContent = items[index].querySelector('span').textContent;
+  setLightboxContent(visibleItems()[index]);
   lightbox.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
 function closeLightbox() {
+  lightboxVideo.pause();
+  lightboxVideo.src = '';
   lightbox.classList.remove('open');
   document.body.style.overflow = '';
 }
@@ -76,9 +94,7 @@ function closeLightbox() {
 function lightboxNav(dir) {
   const items = visibleItems();
   lightboxIndex = (lightboxIndex + dir + items.length) % items.length;
-  lightboxImg.src = items[lightboxIndex].querySelector('img').src;
-  lightboxImg.alt = items[lightboxIndex].querySelector('img').alt;
-  lightboxCaption.textContent = items[lightboxIndex].querySelector('span').textContent;
+  setLightboxContent(items[lightboxIndex]);
 }
 
 galleryItems.forEach(item => {
